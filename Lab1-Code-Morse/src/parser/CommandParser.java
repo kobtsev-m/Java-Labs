@@ -1,6 +1,7 @@
 package parser;
 
-import morse.Coder;
+import morse.Decoder;
+import morse.Encoder;
 import utils.FileUtils;
 
 import java.util.Arrays;
@@ -36,10 +37,15 @@ public class CommandParser {
             System.out.println("Incorrect language, please, try again");
             readCommand();
         }
-        else {
-            Coder c = new Coder(args[0], args[1], args[2]);
-            c.code();
-            c.writeStatistic();
+        else if (args[0].equals("code")) {
+            Encoder encoder = new Encoder(args[1], args[2]);
+            encoder.code();
+            encoder.writeStatistic();
+        }
+        else if (args[0].equals("decode")) {
+            Decoder decoder = new Decoder(args[1], args[2]);
+            decoder.code();
+            decoder.writeStatistic();
         }
     }
 }
