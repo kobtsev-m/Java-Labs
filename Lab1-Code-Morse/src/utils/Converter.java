@@ -12,10 +12,10 @@ public class Converter {
 
     public Converter(String lang) {
         FileUtils fileUtils = new FileUtils(lang + ".txt", "src/convert_files");
-        BufferedReader covertFileReader = fileUtils.getFileReader();
+        BufferedReader convertFileReader = fileUtils.getFileReader();
         try {
             while (true) {
-                String charLine = covertFileReader.readLine();
+                String charLine = convertFileReader.readLine();
                 if (charLine == null) break;
                 String[] args = charLine.split(" ");
                 encodeMap.put(args[0], args[1]);
@@ -26,7 +26,7 @@ public class Converter {
             e.printStackTrace();
         }
     }
-    public Map<String, String> getMap(String operation) {
-        return operation.equals("code") ? encodeMap : decodeMap;
+    public Map<String, String> getMap(boolean encoding) {
+        return encoding ? encodeMap : decodeMap;
     }
 }
