@@ -43,7 +43,7 @@ abstract class Coder {
                             encryptedLine.append(encoding ? getSpaces(1) : "");
                             r.setLength(0);
                         }
-                        charSet.add(new CounterSymbol(ch.charAt(0)));
+                        charSet.add(new CounterSymbol(ch.toUpperCase().charAt(0)));
                     }
                     encryptedLine.append(encoding ? getSpaces(3) : getSpaces(1));
                 }

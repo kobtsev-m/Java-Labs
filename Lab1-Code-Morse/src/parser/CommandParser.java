@@ -10,8 +10,8 @@ import java.util.Scanner;
 
 public class CommandParser {
 
-    private List<String> possibleCommands = Arrays.asList("code", "decode");
-    private List<String> possibleLanguages = Arrays.asList("en", "ru");
+    private final List<String> possibleCommands = Arrays.asList("code", "decode");
+    private final List<String> possibleLanguages = Arrays.asList("en", "ru");
 
     public CommandParser() {
         System.out.print("Please, write command in format: ");
