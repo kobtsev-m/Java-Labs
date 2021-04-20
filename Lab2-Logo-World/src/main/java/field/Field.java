@@ -22,22 +22,14 @@ public class Field {
             Arrays.fill(row, EMPTY_CELL_CHAR);
         }
     }
-    private void validateCoords(Coords coords) {
-        coords.x = coords.x < 0
-            ? size.w + coords.x % size.w
-            : coords.x % size.w;
-        coords.y = coords.y < 0
-            ? size.h + coords.y % size.h
-            : coords.y % size.h;
-    }
-    public void setCell(Coords coords, boolean isEmpty) {
-        validateCoords(coords);
-        data[coords.x][coords.y] = isEmpty
-            ? EMPTY_CELL_CHAR
-            : FILLED_CELL_CHAR;
+    public void setCell(Coords coords, boolean isFilled) {
+        coords.validate(size);
+        data[coords.x][coords.y] = isFilled
+            ? FILLED_CELL_CHAR
+            : EMPTY_CELL_CHAR;
     }
     public char getCell(Coords coords) {
-        validateCoords(coords);
+        coords.validate(size);
         return data[coords.x][coords.y];
     }
     public Size getSize() {

@@ -18,6 +18,10 @@ public class Init extends Command {
             Integer.parseInt(args[3]),
             Integer.parseInt(args[4])
         );
+        LOGGER.debug(String.format(
+            "Initializing game with [Field size %dx%d] [Robot coords (%d, %d)]",
+            fieldSize.w, fieldSize.h, robotCoords.x, robotCoords.y
+        ));
         game.init(fieldSize, robotCoords);
         return new GameStatus(GameStatusCode.SUCCESS, "Success!");
     }

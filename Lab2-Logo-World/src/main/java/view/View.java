@@ -32,7 +32,8 @@ public class View {
                 }
                 System.out.print(" ");
             }
-            System.out.print("\n");
+            System.out.println();
         }
+        System.out.println();
     }
 }

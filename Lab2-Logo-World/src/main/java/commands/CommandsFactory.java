@@ -26,9 +26,8 @@ public class CommandsFactory {
         InputStream commandsFileStream = ClassLoader.getSystemResourceAsStream(
             "commands.properties"
         );
-        System.out.println(commandsFileStream);
         if (commandsFileStream == null) {
-            throw new CustomException("Can't find com.commands properties file");
+            throw new CustomException("Can't find commands properties file");
         }
 
         Properties commandsProperties = new Properties();

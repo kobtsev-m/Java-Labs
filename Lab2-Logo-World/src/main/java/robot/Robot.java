@@ -1,17 +1,21 @@
 package robot;
 
-import utils.Coords;
+import utils.*;
 
 public class Robot {
+
     private Coords coords;
     private boolean drawingMode;
+    private final Size fieldSize;
 
-    public Robot(Coords coords) {
+    public Robot(Coords coords, Size fieldSize) {
         this.coords = coords;
         this.drawingMode = false;
+        this.fieldSize = fieldSize;
     }
 
     public void setCoords(Coords coords) {
+        coords.validate(fieldSize);
         this.coords = coords;
     }
     public void setMode(boolean drawingMode) {

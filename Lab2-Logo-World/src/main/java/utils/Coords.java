@@ -7,13 +7,23 @@ public class Coords {
         this.y = y;
     }
     public Coords add(Coords other) {
-        this.x += other.x;
-        this.y += other.y;
-        return this;
+        return new Coords(
+            this.x + other.x,
+            this.y + other.y
+        );
     }
     public Coords mul(int n) {
-        this.x *= n;
-        this.y *= n;
-        return this;
+        return new Coords(
+            this.x * n,
+            this.y * n
+        );
+    }
+    public void validate(Size fieldSize) {
+        this.x = this.x < 0
+            ? fieldSize.w + this.x % fieldSize.w
+            : this.x % fieldSize.w;
+        this.y = this.y < 0
+            ? fieldSize.h + this.y % fieldSize.h
+            : this.y % fieldSize.h;
     }
 }

@@ -4,11 +4,13 @@ import game.*;
 import utils.*;
 import globals.*;
 
+import org.apache.log4j.Logger;
 import java.util.Map;
 import java.util.Scanner;
 
 public class CommandsParser {
 
+    private static final Logger LOGGER = Logger.getLogger(CommandsParser.class);
     private static final String CMD_SPLIT_REGEX = "\\s+";
 
     private final CommandsFactory commandsFactory;
@@ -23,6 +25,8 @@ public class CommandsParser {
         String[] args =  scanner.nextLine().split(CMD_SPLIT_REGEX);
         GameStatus status = new GameStatus(GameStatusCode.ERROR, "");
 
+        LOGGER.debug("Parsing command string");
+
         if (args.length == 0) {
             status.message = "Command string is empty, please, try again";
         }
@@ -34,7 +38,9 @@ public class CommandsParser {
         }
         else {
             try {
+                LOGGER.debug("Trying to get command instance");
                 Command cmd = commandsFactory.getCommandInstance(args);
+                LOGGER.debug("Executing command");
                 status = cmd.execute();
             }
             catch (NumberFormatException | CustomException e) {

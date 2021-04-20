@@ -4,7 +4,10 @@ import game.*;
 import globals.*;
 import utils.CustomException;
 
+import org.apache.log4j.Logger;
+
 public abstract class Command {
+    protected static final Logger LOGGER = Logger.getLogger(Command.class);
     protected String[] args;
     protected Game game;
     public Command(Game game) {
