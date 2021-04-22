@@ -23,7 +23,8 @@ public class Game {
     private GameStatus status;
     private boolean isInitialized;
 
-    public Game() throws CustomException {
+    /** Clear terminal */
+    public Game() {
         parser = new CommandsParser(this);
         status = new GameStatus(GameStatusCode.START, HELLO_MSG);
         isInitialized = false;
@@ -31,12 +32,13 @@ public class Game {
     public boolean getIsNotInitialized() {
         return !isInitialized;
     }
+    /** Start main game cycle */
     public void start() {
         LOGGER.debug("Game start");
         View.clearScreen();
         while (status.code != GameStatusCode.EXIT) {
             View.showMessage(status.message);
-            status = parser.readCommand();
+            status = parser.readCommand(new String[] {});
             View.clearScreen();
             if (isInitialized) {
                 view.drawField();
@@ -44,6 +46,13 @@ public class Game {
         }
         LOGGER.debug("Game end");
     }
+    /**
+     * Initialize game - set field size & robot coords
+     *
+     * @param fieldSize        Field size
+     * @param robotCoords      Robot coordinates
+     * @throws CustomException If Field Size is incorrect
+     * */
     public void init(Size fieldSize, Coords robotCoords) throws CustomException {
         field = new Field(fieldSize);
         robot = new Robot(robotCoords, fieldSize);

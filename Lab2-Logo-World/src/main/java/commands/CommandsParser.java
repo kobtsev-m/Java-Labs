@@ -16,13 +16,26 @@ public class CommandsParser {
     private final CommandsFactory commandsFactory;
     private final Map<String, Integer> commandsArgs;
 
-    public CommandsParser(Game game) throws CustomException {
+    /**
+     * Create CommandParser instance
+     *
+     * @param game Game instance - for modifying main objects in commands
+     * */
+    public CommandsParser(Game game) {
         this.commandsFactory = new CommandsFactory(game);
         this.commandsArgs = commandsFactory.getCommandsArgsMap();
     }
-    public GameStatus readCommand() {
-        Scanner scanner = new Scanner(System.in);
-        String[] args =  scanner.nextLine().split(CMD_SPLIT_REGEX);
+    /**
+     * Parse arguments string and executes command with instance from
+     * CommandsFactory, then return execution status
+     *
+     * @param args List of args - for tests creation
+     * */
+    public GameStatus readCommand(String[] args) {
+        if (args.length == 0) {
+            Scanner scanner = new Scanner(System.in);
+            args = scanner.nextLine().split(CMD_SPLIT_REGEX);
+        }
         GameStatus status = new GameStatus(GameStatusCode.ERROR, "");
 
         LOGGER.debug("Parsing command string");

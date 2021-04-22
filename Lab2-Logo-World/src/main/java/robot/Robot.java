@@ -13,7 +13,6 @@ public class Robot {
         this.drawingMode = false;
         this.fieldSize = fieldSize;
     }
-
     public void setCoords(Coords coords) {
         coords.validate(fieldSize);
         this.coords = coords;
