@@ -54,6 +54,7 @@ public class Game {
      * @throws CustomException If Field Size is incorrect
      * */
     public void init(Size fieldSize, Coords robotCoords) throws CustomException {
+        robotCoords.validate(fieldSize);
         field = new Field(fieldSize);
         robot = new Robot(robotCoords, fieldSize);
         view = new View(field, robot);
