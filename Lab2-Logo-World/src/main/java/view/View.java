@@ -1,18 +1,15 @@
 package view;
 
+import game.Environment;
 import utils.*;
-import robot.Robot;
-import field.Field;
 
 public class View {
 
-    private final Field field;
-    private final Robot robot;
+    private final Environment environment;
 
     /** Clear view instance */
-    public View(Field field, Robot robot) {
-        this.field = field;
-        this.robot = robot;
+    public View(Environment environment) {
+        this.environment = environment;
     }
     /** Clear terminal */
     public static void clearScreen() {
@@ -24,9 +21,9 @@ public class View {
     }
     /** Draw field with Field data & Robot coords */
     public void drawField() {
-        Size fieldSize = field.getSize();
-        char[][] fieldData = field.getData();
-        Coords robotCoords = robot.getCoords();
+        Size fieldSize = environment.field.getSize();
+        char[][] fieldData = environment.field.getData();
+        Coords robotCoords = environment.robot.getCoords();
         for (int i = 0; i < fieldSize.h; ++i) {
             for (int j = 0; j < fieldSize.w; ++j) {
                 if (robotCoords.x == j && robotCoords.y == i) {

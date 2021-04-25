@@ -5,12 +5,12 @@ import utils.*;
 import globals.*;
 
 public class Teleport extends Command {
-    public Teleport(Game game) {
-        super(game);
+    public Teleport(Environment environment) {
+        super(environment);
     }
     @Override
-    public GameStatus execute() {
-        if (game.getIsNotInitialized()) {
+    public GameStatus execute() throws CustomException {
+        if (!environment.getIsInitialized()) {
             String errorMsg = "Please, execute init command first";
             return new GameStatus(GameStatusCode.ERROR, errorMsg);
         }
@@ -25,7 +25,7 @@ public class Teleport extends Command {
             newCoords.x, newCoords.y
         ));
 
-        game.robot.setCoords(newCoords);
+        environment.robot.setCoords(newCoords);
 
         return new GameStatus(GameStatusCode.SUCCESS, "Success!");
     }

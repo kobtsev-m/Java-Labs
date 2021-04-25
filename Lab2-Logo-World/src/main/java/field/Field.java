@@ -16,11 +16,10 @@ public class Field {
      * Create Field instance
      *
      * @param size Field size
+     * @throws CustomException Is field size is invalid
      * */
     public Field(Size size) throws CustomException {
-        if (size.w <= 0 || size.h <= 0) {
-            throw new CustomException("Negative com.field side size");
-        }
+        size.validate();
         this.size = size;
         this.data = new char[size.w][size.h];
         for (char[] row : data) {
@@ -32,8 +31,9 @@ public class Field {
      *
      * @param coords   Cell coordinates
      * @param isFilled Cell type - filled / empty
+     * @throws CustomException If field size is invalid
      * */
-    public void setCell(Coords coords, boolean isFilled) {
+    public void setCell(Coords coords, boolean isFilled) throws CustomException {
         coords.validate(size);
         data[coords.x][coords.y] = isFilled
             ? FILLED_CELL_CHAR

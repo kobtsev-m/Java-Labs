@@ -29,7 +29,8 @@ public class Coords {
             this.y * n
         );
     }
-    public void validate(Size fieldSize) {
+    public void validate(Size fieldSize) throws CustomException {
+        fieldSize.validate();
         this.x = this.x < 0
             ? fieldSize.w + this.x % fieldSize.w
             : this.x % fieldSize.w;

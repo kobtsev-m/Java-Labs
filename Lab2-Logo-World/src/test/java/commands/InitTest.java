@@ -3,13 +3,13 @@ package commands;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
-import game.Game;
+import game.Environment;
 import globals.GameStatusCode;
 
 public class InitTest {
     @Test
     void executeStatusCheck() {
-        CommandsParser commandsParser = new CommandsParser(new Game());
+        CommandsParser commandsParser = new CommandsParser(new Environment());
         String[] args1 = new String[]{"init", "10", "10", "2", "3"};
         String[] args2 = new String[]{"init", "10", "10", "0", "-7"};
         String[] args3 = new String[]{"init", "-5", "3", "2", "3"};

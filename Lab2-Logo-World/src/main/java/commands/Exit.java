@@ -4,8 +4,8 @@ import game.*;
 import globals.*;
 
 public class Exit extends Command {
-    public Exit(Game game) {
-        super(game);
+    public Exit(Environment environment) {
+        super(environment);
     }
     @Override
     public GameStatus execute() {

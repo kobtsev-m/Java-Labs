@@ -5,8 +5,8 @@ import globals.*;
 import utils.*;
 
 public class Init extends Command {
-    public Init(Game game) {
-        super(game);
+    public Init(Environment environment) {
+        super(environment);
     }
     @Override
     public GameStatus execute() throws CustomException {
@@ -22,7 +22,7 @@ public class Init extends Command {
             "Initializing game with [Field size %dx%d] [Robot coords (%d, %d)]",
             fieldSize.w, fieldSize.h, robotCoords.x, robotCoords.y
         ));
-        game.init(fieldSize, robotCoords);
+        environment.init(fieldSize, robotCoords);
         return new GameStatus(GameStatusCode.SUCCESS, "Success!");
     }
 }

@@ -19,10 +19,11 @@ public class CommandsParser {
     /**
      * Create CommandParser instance
      *
-     * @param game Game instance - for modifying main objects in commands
+     * @param environment Environment instance - for modifying robot &
+     *                    field in commands
      * */
-    public CommandsParser(Game game) {
-        this.commandsFactory = new CommandsFactory(game);
+    public CommandsParser(Environment environment) {
+        this.commandsFactory = new CommandsFactory(environment);
         this.commandsArgs = commandsFactory.getCommandsArgsMap();
     }
     /**

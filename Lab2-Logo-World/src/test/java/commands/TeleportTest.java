@@ -4,15 +4,15 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import utils.*;
-import game.Game;
+import game.Environment;
 import globals.GameStatusCode;
 
 public class TeleportTest {
     @Test
     void executeStatusCheck() throws CustomException {
-        Game game = new Game();
-        CommandsParser commandsParser = new CommandsParser(game);
-        game.init(new Size(10, 10), new Coords(3, 3));
+        Environment environment = new Environment();
+        CommandsParser commandsParser = new CommandsParser(environment);
+        environment.init(new Size(10, 10), new Coords(3, 3));
 
         String[] args1 = new String[]{"teleport", "1"};
         String[] args2 = new String[]{"teleport", "100", "100"};
@@ -29,7 +29,7 @@ public class TeleportTest {
             GameStatusCode.SUCCESS
         );
         assertEquals(
-            game.robot.getCoords(),
+            environment.robot.getCoords(),
             new Coords(0, 0)
         );
         // Args 3
@@ -38,7 +38,7 @@ public class TeleportTest {
             GameStatusCode.SUCCESS
         );
         assertEquals(
-            game.robot.getCoords(),
+            environment.robot.getCoords(),
             new Coords(7, 5)
         );
     }

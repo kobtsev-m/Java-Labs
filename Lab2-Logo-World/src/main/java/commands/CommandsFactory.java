@@ -1,7 +1,6 @@
 package commands;
 
-import game.Game;
-import utils.CustomException;
+import game.Environment;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -13,7 +12,7 @@ import java.util.Properties;
 
 public class CommandsFactory {
 
-    private final Game game;
+    private final Environment environment;
 
     private final Map<String, Integer> commandsArgs;
     private final Map<String, String> commandsClasses;
@@ -23,11 +22,11 @@ public class CommandsFactory {
      * Initialize CommandsFactory with commands maps that are creating
      * from commands.properties data
      *
-     * @param game Game instance - to initialize it in command instances
+     * @param environment Environment instance - to initialize it in commands
      */
-    public CommandsFactory(Game game) {
+    public CommandsFactory(Environment environment) {
 
-        this.game = game;
+        this.environment = environment;
 
         InputStream commandsFileStream = ClassLoader.getSystemResourceAsStream(
             "commands.properties"
@@ -71,8 +70,8 @@ public class CommandsFactory {
     private void createCommandInstance(String cmdName) {
         try {
             Class<?> cmdClass = Class.forName(commandsClasses.get(cmdName));
-            Constructor<?> cmdCons = cmdClass.getConstructor(Game.class);
-            commandsInstances.put(cmdName, (Command) cmdCons.newInstance(game));
+            Constructor<?> cmdCons = cmdClass.getConstructor(Environment.class);
+            commandsInstances.put(cmdName, (Command) cmdCons.newInstance(environment));
         }
         catch (
             ClassNotFoundException |

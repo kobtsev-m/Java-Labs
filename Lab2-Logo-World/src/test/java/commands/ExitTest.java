@@ -3,14 +3,14 @@ package commands;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
-import game.Game;
+import game.Environment;
 import globals.GameStatusCode;
 
 public class ExitTest {
     @Test
     void executeStatusCheck() {
-        Game game = new Game();
-        CommandsParser commandsParser = new CommandsParser(game);
+        Environment environment = new Environment();
+        CommandsParser commandsParser = new CommandsParser(environment);
 
         String[] args1 = new String[]{"exit", "someArgument"};
         String[] args2 = new String[]{"exit"};
