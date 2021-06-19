@@ -1,0 +1,6 @@
+John 64.2
+Martha 15.0
+Steve 95.6
+Steve 66.6
+Relax 103.1
+Michael 99.1

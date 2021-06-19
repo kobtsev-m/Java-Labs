@@ -1,4 +1,4 @@
-package game_objects;
+package models;
 
 import globals.Globals;
 import utils.*;
@@ -15,7 +15,8 @@ public class Snake {
     private final Image image;
 
     public Snake(Coords startCoords) {
-        length = 3;
+        direction = Direction.RIGHT;
+        length = Globals.START_LENGTH;
         coords = new Coords[Globals.DOTS_TOTAl];
         for (int i = 0; i < Globals.DOTS_TOTAl - 1; ++i) {
             if (i < length) {

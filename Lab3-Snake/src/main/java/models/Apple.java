@@ -1,4 +1,4 @@
-package game_objects;
+package models;
 
 import globals.Globals;
 import utils.Coords;

@@ -16,7 +16,7 @@ public class Game {
     private final CommandsParser parser;
     private GameStatus status;
 
-    /** Clear terminal */
+    /** Create game instance */
     public Game() {
         environment = new Environment();
         view = new View(environment);

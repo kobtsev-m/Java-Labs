@@ -1,56 +1,56 @@
-2021-04-26 03:09:21.430 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
-2021-04-26 03:09:21.432 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
-2021-04-26 03:09:21.433 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
-2021-04-26 03:09:21.434 [Test worker] DEBUG commands.Init.execute(Init.java:21) - Initializing game with [Field size 10x10] [Robot coords (2, 3)]
-2021-04-26 03:09:21.438 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
-2021-04-26 03:09:21.439 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
-2021-04-26 03:09:21.439 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
-2021-04-26 03:09:21.440 [Test worker] DEBUG commands.Init.execute(Init.java:21) - Initializing game with [Field size 10x10] [Robot coords (0, -7)]
-2021-04-26 03:09:21.440 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
-2021-04-26 03:09:21.440 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
-2021-04-26 03:09:21.441 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
-2021-04-26 03:09:21.441 [Test worker] DEBUG commands.Init.execute(Init.java:21) - Initializing game with [Field size -5x3] [Robot coords (2, 3)]
-2021-04-26 03:09:21.444 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
-2021-04-26 03:09:21.444 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
-2021-04-26 03:09:21.444 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
-2021-04-26 03:09:21.445 [Test worker] DEBUG commands.Init.execute(Init.java:21) - Initializing game with [Field size 0x0] [Robot coords (2, 3)]
-2021-04-26 03:09:21.467 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
-2021-04-26 03:09:21.467 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
-2021-04-26 03:09:21.468 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
-2021-04-26 03:09:21.469 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
-2021-04-26 03:09:21.469 [Test worker] DEBUG commands.Exit.execute(Exit.java:12) - Exiting...
-2021-04-26 03:09:21.475 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
-2021-04-26 03:09:21.475 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
-2021-04-26 03:09:21.476 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
-2021-04-26 03:09:21.476 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
-2021-04-26 03:09:21.477 [Test worker] DEBUG commands.Teleport.execute(Teleport.java:23) - Teleporting robot to [100, 100]
-2021-04-26 03:09:21.477 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
-2021-04-26 03:09:21.478 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
-2021-04-26 03:09:21.478 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
-2021-04-26 03:09:21.479 [Test worker] DEBUG commands.Teleport.execute(Teleport.java:23) - Teleporting robot to [-3, 5]
-2021-04-26 03:09:21.484 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
-2021-04-26 03:09:21.485 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
-2021-04-26 03:09:21.486 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
-2021-04-26 03:09:21.487 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
-2021-04-26 03:09:21.487 [Test worker] DEBUG commands.Draw.execute(Draw.java:17) - Settings drawing mode to [true]
-2021-04-26 03:09:21.499 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
-2021-04-26 03:09:21.500 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
-2021-04-26 03:09:21.501 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
-2021-04-26 03:09:21.502 [Test worker] DEBUG commands.Move.execute(Move.java:27) - Moving robot to [0, 3] with step [3], drawing - [false]
-2021-04-26 03:09:21.502 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
-2021-04-26 03:09:21.503 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
-2021-04-26 03:09:21.503 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
-2021-04-26 03:09:21.504 [Test worker] DEBUG commands.Move.execute(Move.java:27) - Moving robot to [2, 0] with step [-2], drawing - [false]
-2021-04-26 03:09:21.504 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
-2021-04-26 03:09:21.504 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
-2021-04-26 03:09:21.504 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
-2021-04-26 03:09:21.505 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
-2021-04-26 03:09:21.505 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
-2021-04-26 03:09:21.505 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
-2021-04-26 03:09:21.506 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
-2021-04-26 03:09:21.506 [Test worker] DEBUG commands.Move.execute(Move.java:27) - Moving robot to [11, 0] with step [11], drawing - [false]
-2021-04-26 03:09:21.515 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
-2021-04-26 03:09:21.516 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
-2021-04-26 03:09:21.516 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
-2021-04-26 03:09:21.517 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
-2021-04-26 03:09:21.517 [Test worker] DEBUG commands.Ward.execute(Ward.java:17) - Settings drawing mode to [false]
+2021-04-30 12:22:50.486 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
+2021-04-30 12:22:50.495 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
+2021-04-30 12:22:50.498 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
+2021-04-30 12:22:50.504 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
+2021-04-30 12:22:50.505 [Test worker] DEBUG commands.Exit.execute(Exit.java:12) - Exiting...
+2021-04-30 12:22:50.577 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
+2021-04-30 12:22:50.578 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
+2021-04-30 12:22:50.580 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
+2021-04-30 12:22:50.582 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
+2021-04-30 12:22:50.599 [Test worker] DEBUG commands.Teleport.execute(Teleport.java:23) - Teleporting robot to [100, 100]
+2021-04-30 12:22:50.604 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
+2021-04-30 12:22:50.604 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
+2021-04-30 12:22:50.605 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
+2021-04-30 12:22:50.610 [Test worker] DEBUG commands.Teleport.execute(Teleport.java:23) - Teleporting robot to [-3, 5]
+2021-04-30 12:22:50.653 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
+2021-04-30 12:22:50.659 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
+2021-04-30 12:22:50.664 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
+2021-04-30 12:22:50.670 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
+2021-04-30 12:22:50.677 [Test worker] DEBUG commands.Draw.execute(Draw.java:17) - Settings drawing mode to [true]
+2021-04-30 12:22:50.731 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
+2021-04-30 12:22:50.732 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
+2021-04-30 12:22:50.734 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
+2021-04-30 12:22:50.737 [Test worker] DEBUG commands.Move.execute(Move.java:27) - Moving robot to [0, 3] with step [3], drawing - [false]
+2021-04-30 12:22:50.737 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
+2021-04-30 12:22:50.741 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
+2021-04-30 12:22:50.742 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
+2021-04-30 12:22:50.744 [Test worker] DEBUG commands.Move.execute(Move.java:27) - Moving robot to [2, 0] with step [-2], drawing - [false]
+2021-04-30 12:22:50.745 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
+2021-04-30 12:22:50.748 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
+2021-04-30 12:22:50.750 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
+2021-04-30 12:22:50.750 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
+2021-04-30 12:22:50.753 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
+2021-04-30 12:22:50.756 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
+2021-04-30 12:22:50.757 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
+2021-04-30 12:22:50.759 [Test worker] DEBUG commands.Move.execute(Move.java:27) - Moving robot to [11, 0] with step [11], drawing - [false]
+2021-04-30 12:22:50.790 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
+2021-04-30 12:22:50.801 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
+2021-04-30 12:22:50.803 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
+2021-04-30 12:22:50.818 [Test worker] DEBUG commands.Init.execute(Init.java:21) - Initializing game with [Field size 10x10] [Robot coords (2, 3)]
+2021-04-30 12:22:50.819 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
+2021-04-30 12:22:50.819 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
+2021-04-30 12:22:50.820 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
+2021-04-30 12:22:50.821 [Test worker] DEBUG commands.Init.execute(Init.java:21) - Initializing game with [Field size 10x10] [Robot coords (0, -7)]
+2021-04-30 12:22:50.825 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
+2021-04-30 12:22:50.829 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
+2021-04-30 12:22:50.830 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
+2021-04-30 12:22:50.834 [Test worker] DEBUG commands.Init.execute(Init.java:21) - Initializing game with [Field size -5x3] [Robot coords (2, 3)]
+2021-04-30 12:22:50.844 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
+2021-04-30 12:22:50.869 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
+2021-04-30 12:22:50.869 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
+2021-04-30 12:22:50.870 [Test worker] DEBUG commands.Init.execute(Init.java:21) - Initializing game with [Field size 0x0] [Robot coords (2, 3)]
+2021-04-30 12:22:50.894 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
+2021-04-30 12:22:50.901 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:42) - Parsing command string
+2021-04-30 12:22:50.912 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:55) - Trying to get command instance
+2021-04-30 12:22:50.915 [Test worker] DEBUG commands.CommandsParser.readCommand(CommandsParser.java:57) - Executing command
+2021-04-30 12:22:50.920 [Test worker] DEBUG commands.Ward.execute(Ward.java:17) - Settings drawing mode to [false]
