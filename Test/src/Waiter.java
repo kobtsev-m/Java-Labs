@@ -1,22 +1,36 @@
-import java.util.Random;
-import java.util.concurrent.Exchanger;
+public class Waiter extends Thread {
 
-public class Waiter implements Runnable {
+    private final Restaurant restaurant;
+    private final Meal meal;
 
-    private final Exchanger<Meal> mealExchanger;
-
-    public Waiter(Exchanger<Meal> mealExchanger) {
-        this.mealExchanger = mealExchanger;
+    public Waiter(Restaurant restaurant, Meal meal) {
+        this.restaurant = restaurant;
+        this.meal = meal;
     }
+    void bringOrder() {
+        try {
+            Thread.sleep(10L * meal.getWeight());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+    @Override
     public void run() {
-        for (int i = 0; i < Restaurant.ORDERS_TOTAL; i++) {
-            int weight = new Random().nextInt(20) + 10;
-            Meal meal = new Meal(weight);
-            try {
-                mealExchanger.exchange(meal);
-            } catch (InterruptedException e) {
-                System.out.println(e.getMessage());
+        while (restaurant.getOrders() < restaurant.getTotalOrders()) {
+            System.out.println("Order " + (restaurant.getOrders() + 1));
+            bringOrder();
+            synchronized (meal) {
+                meal.regenerateWeight();
+                meal.notify();
+                System.out.print("Waiter bring meal, time: ");
+                System.out.println(10L * meal.getWeight() + "ms");
+                try {
+                    meal.wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
+            restaurant.increaseOrders();
         }
     }
 }

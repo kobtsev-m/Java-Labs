@@ -1,20 +1,35 @@
-import java.util.concurrent.Exchanger;
+public class Chef extends Thread {
 
-public class Chef implements Runnable {
+    private final Restaurant restaurant;
+    private final Meal meal;
 
-    private final Exchanger<Meal> mealExchanger;
-
-    public Chef(Exchanger<Meal> mealExchanger) {
-        this.mealExchanger = mealExchanger;
+    public Chef(Restaurant restaurant, Meal meal) {
+        this.restaurant = restaurant;
+        this.meal = meal;
     }
+    void cook() {
+        try {
+            Thread.sleep(100L * meal.getWeight());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+    @Override
     public void run() {
-        for (int i = 0; i < Restaurant.ORDERS_TOTAL; i++) {
-            try {
-                Meal receivedMeal = mealExchanger.exchange(null);
-                receivedMeal.cook();
-                receivedMeal.showResult();
-            } catch (InterruptedException e) {
-                System.out.println(e.getMessage());
+        while (true) {
+            cook();
+            synchronized (meal) {
+                meal.notify();
+                System.out.print("Chef cooked meal, time: ");
+                System.out.println(100L * meal.getWeight() + "ms");
+                if (restaurant.getOrders() == restaurant.getTotalOrders() - 1) {
+                    break;
+                }
+                try {
+                    meal.wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }

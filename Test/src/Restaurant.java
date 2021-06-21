@@ -1,12 +1,29 @@
-import java.util.concurrent.Exchanger;
-
 public class Restaurant {
 
-    static int ORDERS_TOTAL = 10;
+    private final int TOTAL_ORDERS = 5;
+    private int orders;
 
+    public int getTotalOrders() {
+        return TOTAL_ORDERS;
+    }
+    public int getOrders() {
+        return orders;
+    }
+    public void increaseOrders() {
+        orders++;
+    }
     void open() {
-        Exchanger<Meal> mealExchanger = new Exchanger<>();
-        new Thread(new Waiter(mealExchanger)).start();
-        new Thread(new Chef(mealExchanger)).start();
+        Meal currentOffer = new Meal();
+        Waiter waiter = new Waiter(this, currentOffer);
+        Chef chef = new Chef(this, currentOffer);
+        waiter.start();
+        chef.start();
+        try {
+            waiter.join();
+            chef.join();
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
